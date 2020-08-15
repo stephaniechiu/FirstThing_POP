@@ -9,21 +9,25 @@
 /* Begin PBXBuildFile section */
 		908097A424E7278400B7268A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 908097A324E7278400B7268A /* AppDelegate.swift */; };
 		908097A624E7278400B7268A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 908097A524E7278400B7268A /* SceneDelegate.swift */; };
-		908097A824E7278400B7268A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 908097A724E7278400B7268A /* ViewController.swift */; };
-		908097AB24E7278400B7268A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 908097A924E7278400B7268A /* Main.storyboard */; };
+		908097A824E7278400B7268A /* NewsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 908097A724E7278400B7268A /* NewsController.swift */; };
 		908097AD24E7278700B7268A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 908097AC24E7278700B7268A /* Assets.xcassets */; };
 		908097B024E7278700B7268A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 908097AE24E7278700B7268A /* LaunchScreen.storyboard */; };
+		908097BC24E7337600B7268A /* Protocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 908097BB24E7337600B7268A /* Protocols.swift */; };
+		908097BE24E7338500B7268A /* NewsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 908097BD24E7338500B7268A /* NewsView.swift */; };
+		908097C124E747B600B7268A /* UIViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 908097C024E747B600B7268A /* UIViewExtensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		908097A024E7278400B7268A /* FirstThing_POP.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FirstThing_POP.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		908097A324E7278400B7268A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		908097A524E7278400B7268A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		908097A724E7278400B7268A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		908097AA24E7278400B7268A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		908097A724E7278400B7268A /* NewsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsController.swift; sourceTree = "<group>"; };
 		908097AC24E7278700B7268A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		908097AF24E7278700B7268A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		908097B124E7278700B7268A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		908097BB24E7337600B7268A /* Protocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Protocols.swift; sourceTree = "<group>"; };
+		908097BD24E7338500B7268A /* NewsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsView.swift; sourceTree = "<group>"; };
+		908097C024E747B600B7268A /* UIViewExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewExtensions.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,13 +62,55 @@
 			children = (
 				908097A324E7278400B7268A /* AppDelegate.swift */,
 				908097A524E7278400B7268A /* SceneDelegate.swift */,
-				908097A724E7278400B7268A /* ViewController.swift */,
-				908097A924E7278400B7268A /* Main.storyboard */,
+				908097B724E7323900B7268A /* Model */,
+				908097B824E7324C00B7268A /* View */,
+				908097B924E7325200B7268A /* Controller */,
+				908097BA24E7336400B7268A /* Protocols */,
+				908097BF24E747A700B7268A /* Extensions */,
 				908097AC24E7278700B7268A /* Assets.xcassets */,
 				908097AE24E7278700B7268A /* LaunchScreen.storyboard */,
 				908097B124E7278700B7268A /* Info.plist */,
 			);
 			path = FirstThing_POP;
+			sourceTree = "<group>";
+		};
+		908097B724E7323900B7268A /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		908097B824E7324C00B7268A /* View */ = {
+			isa = PBXGroup;
+			children = (
+				908097BD24E7338500B7268A /* NewsView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		908097B924E7325200B7268A /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				908097A724E7278400B7268A /* NewsController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		908097BA24E7336400B7268A /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				908097BB24E7337600B7268A /* Protocols.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		908097BF24E747A700B7268A /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				908097C024E747B600B7268A /* UIViewExtensions.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -127,7 +173,6 @@
 			files = (
 				908097B024E7278700B7268A /* LaunchScreen.storyboard in Resources */,
 				908097AD24E7278700B7268A /* Assets.xcassets in Resources */,
-				908097AB24E7278400B7268A /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -138,23 +183,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				908097A824E7278400B7268A /* ViewController.swift in Sources */,
+				908097A824E7278400B7268A /* NewsController.swift in Sources */,
+				908097C124E747B600B7268A /* UIViewExtensions.swift in Sources */,
 				908097A424E7278400B7268A /* AppDelegate.swift in Sources */,
 				908097A624E7278400B7268A /* SceneDelegate.swift in Sources */,
+				908097BE24E7338500B7268A /* NewsView.swift in Sources */,
+				908097BC24E7337600B7268A /* Protocols.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		908097A924E7278400B7268A /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				908097AA24E7278400B7268A /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		908097AE24E7278700B7268A /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -294,7 +334,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.stephaniechiu.FirstThing-POP";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -312,7 +352,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.stephaniechiu.FirstThing-POP";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
