@@ -9,12 +9,16 @@
 import UIKit
 import UserNotifications
 
-class NewsController: UIViewController, UNUserNotificationCenterDelegate {
+class NewsController: UIViewController, UITableViewDataSource, UITableViewDelegate {
         
     // MARK: - Properties
     
     let newsView = NewsView()
+    let newsTableView = UITableView()
     let userNotificationCenter = UNUserNotificationCenter.current()
+//    var newsViewModel = [NewsViewModel]()
+    var articles = [Article]()
+    let newsURL = "https://newsapi.org/v2/top-headlines?country=us&apiKey=e2f0b28b0f0146dcb2b9c2ce5c3142a7"
         
     // MARK: - Init
     
@@ -23,17 +27,52 @@ class NewsController: UIViewController, UNUserNotificationCenterDelegate {
         view = newsView
         
         setupNavigationController()
+        setupLayout()
+        setupTableView()
         
-        userNotificationCenter.delegate = self
+        if let url = URL(string: newsURL) {
+            if let data = try? Data(contentsOf: url) {
+                getLatestNewsArticles(json: data)
+            }
+        }
+        
+//        userNotificationCenter.delegate = self
         requestNotificationAuthorization()
         sendNotification()
     }
         
+    // MARK: - API Call
+        //Create view model > api call. Create delegate (ex apidelegate), update with data
+    func getLatestNewsArticles(json: Data) {
+        let decoder = JSONDecoder()
+
+        if let JSONArticles = try? decoder.decode(Articles.self, from: json) {
+            articles = JSONArticles.articles
+            print(articles)
+            newsTableView.reloadData()
+        }
+    }
+    
     // MARK: - Helper Functions
 
     func setupNavigationController() {
         navigationController?.navigationBar.tintColor = .clear
         navigationController?.navigationBar.isHidden = true
+    }
+    
+    func setupLayout() {
+        view.addSubview(newsTableView)
+        newsTableView.anchor(top: newsView.firstThingTitle.bottomAnchor, left: view.leftAnchor, bottom: view.bottomAnchor, right: view.rightAnchor, paddingTop: 20)
+    }
+    
+    func setupTableView() {
+        newsTableView.dataSource = self
+        newsTableView.delegate = self
+        newsTableView.register(UITableViewCell.self, forCellReuseIdentifier: Cell.titleCellID)
+//        newsTableView.register(NewsDetailsTableViewCell.self, forCellReuseIdentifier: Cell.detailsCellID)
+        newsTableView.estimatedRowHeight = 50
+        newsTableView.rowHeight = UITableView.automaticDimension
+        newsTableView.separatorStyle = .none
     }
     
     // MARK: - Selectors
@@ -51,6 +90,7 @@ class NewsController: UIViewController, UNUserNotificationCenterDelegate {
             }
         }
 
+    //Put in protocol. title and body
         func sendNotification() {
             let notificationContent = UNMutableNotificationContent()
 
@@ -80,5 +120,22 @@ class NewsController: UIViewController, UNUserNotificationCenterDelegate {
         func userNotificationCenter(_ center: UNUserNotificationCenter, willPresent notification: UNNotification, withCompletionHandler completionHandler: @escaping (UNNotificationPresentationOptions) -> Void) {
             completionHandler([.alert, .badge, .sound])
         }
+    
+// MARK: - TableView Data Source
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return articles.count
+    }
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return UITableView.automaticDimension
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: Cell.titleCellID, for: indexPath)
+        let articleTitle = articles[indexPath.row]
+        cell.textLabel?.text = articleTitle.title
+        return cell
+    }
 }
 

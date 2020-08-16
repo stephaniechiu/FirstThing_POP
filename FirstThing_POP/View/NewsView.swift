@@ -12,7 +12,7 @@ class NewsView: UIView, ViewWithBackground {
     
 // MARK: - Properties
     
-    var customBackgroundGradient: UIColor = .blue
+    var customBackgroundGradient: UIColor = .white
     
     let firstThingTitle: UILabel = {
         let title = UILabel()
@@ -35,7 +35,7 @@ class NewsView: UIView, ViewWithBackground {
 // MARK: - Init
     override init(frame: CGRect) {
         super.init(frame: frame)
-        
+        setupLayout()
     }
     
     required init?(coder: NSCoder) {
@@ -47,6 +47,7 @@ class NewsView: UIView, ViewWithBackground {
 // MARK: - Helper Functions
     
     func setupLayout() {
+        backgroundColor = customBackgroundGradient
         addSubview(firstThingTitle)
         firstThingTitle.anchor(top: safeAreaLayoutGuide.topAnchor, left: leftAnchor, right: rightAnchor, paddingTop: 15, paddingLeft: 15)
     }

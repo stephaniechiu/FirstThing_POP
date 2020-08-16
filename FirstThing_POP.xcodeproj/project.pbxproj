@@ -15,6 +15,9 @@
 		908097BC24E7337600B7268A /* Protocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 908097BB24E7337600B7268A /* Protocols.swift */; };
 		908097BE24E7338500B7268A /* NewsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 908097BD24E7338500B7268A /* NewsView.swift */; };
 		908097C124E747B600B7268A /* UIViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 908097C024E747B600B7268A /* UIViewExtensions.swift */; };
+		908097C324E87A8800B7268A /* NewsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 908097C224E87A8800B7268A /* NewsModel.swift */; };
+		908097C624E87A9F00B7268A /* NewsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 908097C524E87A9F00B7268A /* NewsViewModel.swift */; };
+		908097C824E87C1300B7268A /* CellID.swift in Sources */ = {isa = PBXBuildFile; fileRef = 908097C724E87C1300B7268A /* CellID.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +31,9 @@
 		908097BB24E7337600B7268A /* Protocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Protocols.swift; sourceTree = "<group>"; };
 		908097BD24E7338500B7268A /* NewsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsView.swift; sourceTree = "<group>"; };
 		908097C024E747B600B7268A /* UIViewExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewExtensions.swift; sourceTree = "<group>"; };
+		908097C224E87A8800B7268A /* NewsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsModel.swift; sourceTree = "<group>"; };
+		908097C524E87A9F00B7268A /* NewsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsViewModel.swift; sourceTree = "<group>"; };
+		908097C724E87C1300B7268A /* CellID.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellID.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,6 +70,7 @@
 				908097A524E7278400B7268A /* SceneDelegate.swift */,
 				908097B724E7323900B7268A /* Model */,
 				908097B824E7324C00B7268A /* View */,
+				908097C424E87A9000B7268A /* ViewModel */,
 				908097B924E7325200B7268A /* Controller */,
 				908097BA24E7336400B7268A /* Protocols */,
 				908097BF24E747A700B7268A /* Extensions */,
@@ -77,6 +84,8 @@
 		908097B724E7323900B7268A /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				908097C224E87A8800B7268A /* NewsModel.swift */,
+				908097C724E87C1300B7268A /* CellID.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -85,6 +94,7 @@
 			isa = PBXGroup;
 			children = (
 				908097BD24E7338500B7268A /* NewsView.swift */,
+				908097C924E8894700B7268A /* TableViewCell */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -111,6 +121,21 @@
 				908097C024E747B600B7268A /* UIViewExtensions.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		908097C424E87A9000B7268A /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				908097C524E87A9F00B7268A /* NewsViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		908097C924E8894700B7268A /* TableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = TableViewCell;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -183,12 +208,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				908097C324E87A8800B7268A /* NewsModel.swift in Sources */,
 				908097A824E7278400B7268A /* NewsController.swift in Sources */,
 				908097C124E747B600B7268A /* UIViewExtensions.swift in Sources */,
 				908097A424E7278400B7268A /* AppDelegate.swift in Sources */,
 				908097A624E7278400B7268A /* SceneDelegate.swift in Sources */,
 				908097BE24E7338500B7268A /* NewsView.swift in Sources */,
 				908097BC24E7337600B7268A /* Protocols.swift in Sources */,
+				908097C624E87A9F00B7268A /* NewsViewModel.swift in Sources */,
+				908097C824E87C1300B7268A /* CellID.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

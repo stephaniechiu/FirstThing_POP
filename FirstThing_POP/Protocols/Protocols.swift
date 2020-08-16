@@ -17,3 +17,13 @@ extension ViewWithBackground where Self: UIView {
         backgroundColor = customBackgroundGradient
     }
 }
+
+protocol parseJSON {
+    func newsURL() -> URL
+}
+
+extension parseJSON where Self: Codable {
+    func newsURL() -> URL {
+        
+    }
+}
