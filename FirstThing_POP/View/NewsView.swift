@@ -8,13 +8,13 @@
 
 import UIKit
 
-class NewsView: UIView, ViewWithBackground {
+class NewsView: UIView, ViewLayoutDelegate {
+
     
 // MARK: - Properties
-    
-    var customBackgroundGradient: UIColor = .white
-    
-    let firstThingTitle: UILabel = {
+    weak var delegate: ViewLayoutDelegate?
+    var viewBackgroundColor: UIColor = .systemBackground
+    var titleLabel: UILabel = {
         let title = UILabel()
         title.textColor = .label
         title.font = UIFont(name: "AvenirNext-Bold", size: 24)
@@ -35,20 +35,18 @@ class NewsView: UIView, ViewWithBackground {
 // MARK: - Init
     override init(frame: CGRect) {
         super.init(frame: frame)
-        setupLayout()
+        setupViewLayout()
     }
     
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
-    
-// MARK: - Selectors
-    
+
 // MARK: - Helper Functions
     
-    func setupLayout() {
-        backgroundColor = customBackgroundGradient
-        addSubview(firstThingTitle)
-        firstThingTitle.anchor(top: safeAreaLayoutGuide.topAnchor, left: leftAnchor, right: rightAnchor, paddingTop: 15, paddingLeft: 15)
+    func setupViewLayout() {
+        backgroundColor = viewBackgroundColor
+        addSubview(titleLabel)
+        titleLabel.anchor(top: safeAreaLayoutGuide.topAnchor, left: leftAnchor, right: rightAnchor, paddingTop: 15, paddingLeft: 15)
     }
 }
