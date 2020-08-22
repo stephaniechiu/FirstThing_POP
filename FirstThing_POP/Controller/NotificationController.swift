@@ -9,6 +9,10 @@
 import UIKit
 import UserNotifications
 
+/*
+ Sends user a notification to check the news at a specific time
+ */
+
 extension NewsController: UNUserNotificationCenterDelegate {
     
     func sendNotification() {

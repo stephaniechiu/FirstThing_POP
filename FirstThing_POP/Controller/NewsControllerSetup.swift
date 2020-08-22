@@ -6,11 +6,15 @@
 //  Copyright © 2020 Stephanie Chiu. All rights reserved.
 //
 
+/*
+ Sets up the navigation controller, layout, and tableView
+ */
+
 import UIKit
 
 extension NewsController: ControllerDelegate {
     func setupNavigationController() {
-        navigationController?.navigationBar.tintColor = .blue
+        navigationController?.navigationBar.tintColor = .clear
         navigationController?.navigationBar.isHidden = false
     }
     
@@ -20,8 +24,8 @@ extension NewsController: ControllerDelegate {
     }
     
     func setupTableView() {
-        newsTableView.register(UITableViewCell.self, forCellReuseIdentifier: Cell.titleCellID)
-        newsTableView.estimatedRowHeight = 50
+        newsTableView.register(NewsTableViewCell.self, forCellReuseIdentifier: Cell.titleCellID)
+        newsTableView.estimatedRowHeight = 70
         newsTableView.rowHeight = UITableView.automaticDimension
         newsTableView.separatorStyle = .none
     }

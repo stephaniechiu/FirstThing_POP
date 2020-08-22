@@ -8,7 +8,7 @@
 
 import UIKit
 
-class NewsController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+class NewsController: UIViewController {
         
     // MARK: - Properties
     

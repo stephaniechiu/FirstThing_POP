@@ -13,7 +13,6 @@ struct Articles: Codable {
 }
 
 struct Article: Codable {
-//    var opened: Bool = false
     var title: String = ""
     var description: String? = ""
     var url: String = ""
