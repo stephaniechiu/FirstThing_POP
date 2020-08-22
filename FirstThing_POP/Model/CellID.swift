@@ -12,4 +12,5 @@ struct Cell {
     static let titleCellID = "TitleCell"
     static let detailsCellID = "DetailsCell"
     static let sectionHeaderID = "SectonHeader"
+    static let categoryID = "CategoryCell"
 }
