@@ -16,27 +16,31 @@ extension CategoryController: ControllerDelegate {
     }
     
     func setupLayout() {
-        print("hello")
+        view.addSubview(collectionView)
+        collectionView.anchor(top: categoryView.titleLabel.bottomAnchor, left: view.leftAnchor, right: view.rightAnchor, paddingTop: 10, paddingLeft: 10, paddingRight: 10, height: 50)
+        
+        view.addSubview(newsTableView)
+        newsTableView.anchor(top: collectionView.bottomAnchor, left: view.leftAnchor, bottom: view.safeAreaLayoutGuide.bottomAnchor, right: view.rightAnchor, paddingTop: 10, paddingLeft: 10, paddingBottom: 10, paddingRight: 10)
     }
     
-    func setupCollectionViewLayout() {
-        let collectionView: UICollectionView = {
-            let viewLayout = UICollectionViewFlowLayout()
-                
-            let collectionView = UICollectionView(frame: .zero, collectionViewLayout: viewLayout)
-            collectionView.backgroundColor = .systemBackground
-                
-            collectionView.setCollectionViewLayout(viewLayout, animated: true)
-            return collectionView
-        }()
+    func setupCollectionView() {
+        collectionView.backgroundColor = .systemBackground
+        collectionView.setCollectionViewLayout(viewLayout, animated: true)
+        
+        //Set collectionView cell sizes and spacing from other cells
+        viewLayout.sectionInset = UIEdgeInsets(top: 20, left: 20, bottom: 10, right: 20)
+        viewLayout.itemSize = CGSize(width: 40, height: 20)
         
         collectionView.dataSource = self
         collectionView.delegate = self
         collectionView.register(CategoryCollectionViewCell.self, forCellWithReuseIdentifier: cellReuseIdentifier)
         collectionView.allowsMultipleSelection = true
-        
-        view.addSubview(collectionView)
-        collectionView.anchor(top: categoryView.titleLabel.bottomAnchor, left: view.leftAnchor, bottom: view.bottomAnchor, right: view.rightAnchor, paddingTop: 10, paddingLeft: 10, paddingBottom: 20, paddingRight: 10)
+    }
+    
+    func setupTableView() {
+        newsTableView.register(NewsTableViewCell.self, forCellReuseIdentifier: Cell.titleCellID)
+        newsTableView.estimatedRowHeight = 70
+        newsTableView.rowHeight = UITableView.automaticDimension
     }
     
 }

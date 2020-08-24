@@ -20,13 +20,13 @@ extension NewsController: ControllerDelegate {
     
     func setupLayout() {
         view.addSubview(newsTableView)
-        newsTableView.anchor(top: newsView.titleLabel.bottomAnchor, left: view.leftAnchor, bottom: view.bottomAnchor, right: view.rightAnchor, paddingTop: 20)
+        newsTableView.anchor(top: newsView.titleLabel.bottomAnchor, left: view.leftAnchor, bottom: view.safeAreaLayoutGuide.bottomAnchor, right: view.rightAnchor, paddingTop: 20)
     }
     
     func setupTableView() {
         newsTableView.register(NewsTableViewCell.self, forCellReuseIdentifier: Cell.titleCellID)
         newsTableView.estimatedRowHeight = 70
         newsTableView.rowHeight = UITableView.automaticDimension
-        newsTableView.separatorStyle = .none
+//        newsTableView.separatorStyle = .none
     }
 }

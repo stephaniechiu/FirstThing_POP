@@ -8,12 +8,21 @@
 
 import UIKit
 
-class CategoryController: UIViewController, UICollectionViewDelegate {
+class CategoryController: UIViewController {
     
     // MARK: - Properties
+    
     let categoryView = CategoryView()
+    
+    //CollectionView
+    var collectionView = UICollectionView(frame: .zero, collectionViewLayout: UICollectionViewFlowLayout.init())
+    let viewLayout = UICollectionViewFlowLayout()
     var cellReuseIdentifier = Cell.categoryID
     var category: [Category] = []
+    
+    //TableView
+    let newsTableView = UITableView()
+    var articles = [Article]()
 
     // MARK: - Init
     
@@ -22,7 +31,11 @@ class CategoryController: UIViewController, UICollectionViewDelegate {
         view = categoryView
         
         category = fetchCategoryURL()
-        setupCollectionViewLayout()
+        
+        setupNavigationController()
+        setupLayout()
+        setupCollectionView()
+        setupTableView()
     }
 
 }
