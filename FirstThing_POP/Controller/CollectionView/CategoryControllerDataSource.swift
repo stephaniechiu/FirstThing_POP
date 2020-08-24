@@ -23,29 +23,7 @@ extension CategoryController: UICollectionViewDataSource {
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize.init(width: view.frame.width, height: 300)
+        return CGSize.init(width: collectionView.frame.width, height: 200)
     }
-    
-//    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-//
-//        enum LayoutConstant {
-//            static let spacing: CGFloat = 16.0
-//            static let itemHeight: CGFloat = 30.0
-//        }
-//
-//        let width = itemWidth(for: view.frame.width, spacing: 0)
-//
-//        return CGSize(width: width, height: LayoutConstant.itemHeight)
-//    }
-//
-//    func itemWidth(for width: CGFloat, spacing: CGFloat) -> CGFloat {
-//        let itemsInRow: CGFloat = 3
-//
-//        let totalSpacing: CGFloat = 2 * spacing + (itemsInRow - 1) * spacing
-//        let finalWidth = (width - totalSpacing) / itemsInRow
-//
-//        return finalWidth - 5.0
-//    }
-    
 
 }

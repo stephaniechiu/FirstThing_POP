@@ -30,7 +30,7 @@ class NewsController: UIViewController {
         parseFromJSON()
         
         newsTableView.dataSource = self
-        newsTableView.delegate = self
+//        newsTableView.delegate = self
     }
     
     func parseFromJSON() {

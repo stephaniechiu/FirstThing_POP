@@ -36,6 +36,8 @@ class CategoryController: UIViewController {
         setupLayout()
         setupCollectionView()
         setupTableView()
+        
+        newsTableView.dataSource = self
     }
 
 }

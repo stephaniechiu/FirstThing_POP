@@ -25,6 +25,7 @@
 		904BB20424F0BFE80058CFAD /* CategoryControllerDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 904BB20324F0BFE80058CFAD /* CategoryControllerDataSource.swift */; };
 		904BB20924F200310058CFAD /* CategoryControllerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 904BB20824F200310058CFAD /* CategoryControllerDelegate.swift */; };
 		904BB20B24F335270058CFAD /* TableViewSetup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 904BB20A24F335270058CFAD /* TableViewSetup.swift */; };
+		904BB20D24F34CF60058CFAD /* CategoryTableDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 904BB20C24F34CF60058CFAD /* CategoryTableDataSource.swift */; };
 		908097A424E7278400B7268A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 908097A324E7278400B7268A /* AppDelegate.swift */; };
 		908097A624E7278400B7268A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 908097A524E7278400B7268A /* SceneDelegate.swift */; };
 		908097A824E7278400B7268A /* NewsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 908097A724E7278400B7268A /* NewsController.swift */; };
@@ -55,6 +56,7 @@
 		904BB20324F0BFE80058CFAD /* CategoryControllerDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryControllerDataSource.swift; sourceTree = "<group>"; };
 		904BB20824F200310058CFAD /* CategoryControllerDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryControllerDelegate.swift; sourceTree = "<group>"; };
 		904BB20A24F335270058CFAD /* TableViewSetup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewSetup.swift; sourceTree = "<group>"; };
+		904BB20C24F34CF60058CFAD /* CategoryTableDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryTableDataSource.swift; sourceTree = "<group>"; };
 		908097A024E7278400B7268A /* FirstThing_POP.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FirstThing_POP.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		908097A324E7278400B7268A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		908097A524E7278400B7268A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -102,6 +104,7 @@
 			isa = PBXGroup;
 			children = (
 				9045F50924EC8208004A040C /* NewsControllerDataSource.swift */,
+				904BB20C24F34CF60058CFAD /* CategoryTableDataSource.swift */,
 			);
 			path = TableView;
 			sourceTree = "<group>";
@@ -315,6 +318,7 @@
 				904BB1FE24F0BE320058CFAD /* CategoryModel.swift in Sources */,
 				908097C124E747B600B7268A /* UIViewExtensions.swift in Sources */,
 				904BB1FA24F0BB990058CFAD /* CategoryControllerSetup.swift in Sources */,
+				904BB20D24F34CF60058CFAD /* CategoryTableDataSource.swift in Sources */,
 				904BB20424F0BFE80058CFAD /* CategoryControllerDataSource.swift in Sources */,
 				904BB1F224F0B26D0058CFAD /* TabBarController.swift in Sources */,
 				9045F4FE24EB2BB9004A040C /* ViewProtocol.swift in Sources */,

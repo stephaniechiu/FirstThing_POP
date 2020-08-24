@@ -23,7 +23,7 @@ class NewsTableViewCell: UITableViewCell {
         label.numberOfLines = 0
         label.lineBreakMode = .byWordWrapping
         label.textColor = .label
-        label.font = UIFont(name: "AvenirNext-Bold", size: 18)
+        label.font = UIFont(name: "AvenirNext-Bold", size: 14)
         return label
     }()
     
@@ -41,7 +41,7 @@ class NewsTableViewCell: UITableViewCell {
         label.numberOfLines = 0
         label.lineBreakMode = .byWordWrapping
         label.textColor = .label
-        label.font = UIFont(name: "AvenirNext", size: 14)
+        label.font = UIFont(name: "AvenirNext-Regular", size: 12)
         return label
     }()
     
@@ -58,7 +58,7 @@ class NewsTableViewCell: UITableViewCell {
     var lastUpdatedLabel: UILabel = {
         let label = UILabel()
         label.textColor = .systemGray
-        label.font = UIFont(name: "AvenirNext", size: 12)
+        label.font = UIFont(name: "AvenirNext-Regular", size: 10)
         return label
     }()
     
@@ -73,17 +73,17 @@ class NewsTableViewCell: UITableViewCell {
         container.anchor(top: topAnchor, left: leftAnchor, bottom: bottomAnchor, right: rightAnchor, paddingTop: 4, paddingLeft: 4, paddingBottom: 4, paddingRight: 4)
         
         addSubview(newsTitleLabel)
-        newsTitleLabel.anchor(top: container.topAnchor, left: container.leftAnchor, right: container.rightAnchor, paddingTop: 10, paddingLeft: 10, paddingRight: 10, height: 70)
+        newsTitleLabel.anchor(top: container.topAnchor, left: container.leftAnchor, right: container.rightAnchor, paddingTop: 10, paddingLeft: 10, paddingRight: 10)
         
         addSubview(descriptionLabel)
         descriptionLabel.anchor(top: newsTitleLabel.bottomAnchor, left: container.leftAnchor, right: container.rightAnchor, paddingTop: 10, paddingLeft: 20, paddingRight: 20)
         
         addSubview(lastUpdatedLabel)
-        lastUpdatedLabel.anchor(top: descriptionLabel.bottomAnchor, left: container.leftAnchor, bottom: container.bottomAnchor, paddingTop: 10, paddingLeft: 20, paddingBottom: 10)
+        lastUpdatedLabel.anchor(top: descriptionLabel.bottomAnchor, bottom: bottomAnchor, right: rightAnchor, paddingTop: 5, paddingBottom: 10, paddingRight: 40)
 
         readMoreButton.addTarget(self, action: #selector(openURL(sender:)), for: .touchUpInside)
         addSubview(readMoreButton)
-        readMoreButton.anchor(bottom: container.bottomAnchor, right: container.rightAnchor, paddingBottom: 10, paddingRight: 20)
+        readMoreButton.anchor(top: descriptionLabel.bottomAnchor, left: leftAnchor, bottom: bottomAnchor, paddingTop: 5, paddingLeft: 40, paddingBottom: 10)
         }
         
     required init?(coder: NSCoder) {
@@ -94,7 +94,6 @@ class NewsTableViewCell: UITableViewCell {
     
     @objc func openURL(sender: UIButton) {
         self.readMoreAction?(sender)
-        print("read")
     }
     
     // MARK: - Helper Functions

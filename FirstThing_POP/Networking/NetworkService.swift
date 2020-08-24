@@ -20,7 +20,7 @@ class NetworkService {
 
                 if let JSONArticles = try? decoder.decode(Articles.self, from: data) {
                     jsonArticles = JSONArticles.articles
-                    print("----------\(jsonArticles)----------")
+//                    print("----------\(jsonArticles)----------")
                 }
             }
 

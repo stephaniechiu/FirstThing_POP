@@ -1,8 +1,8 @@
 //
-//  NewsViewCell.swift
+//  NewsDetailsTableViewCell.swift
 //  FirstThing_POP
 //
-//  Created by Stephanie on 8/15/20.
+//  Created by Stephanie on 8/20/20.
 //  Copyright © 2020 Stephanie Chiu. All rights reserved.
 //
 
@@ -11,13 +11,38 @@ import UIKit
 class NewsDetailsTableViewCell: UITableViewCell {
 
 // MARK: - Properties
-    var descriptionLabel = UILabel()
-    var readMoreButton = UIButton()
-    var lastUpdatedLabel = UILabel()
-
-    
-    //Closure created for Read More action to assign the parsed JSON url to it in NewsController cellForRowAtIndexPath
-    var readMoreAction: ((UIButton) -> Void)?
+//
+//    //Description of the article
+//    var descriptionLabel: UILabel = {
+//        let label = UILabel()
+//        label.numberOfLines = 0
+//        label.lineBreakMode = .byWordWrapping
+//        label.textColor = .label
+//        label.font = UIFont(name: "AvenirNext", size: 14)
+//        return label
+//    }()
+//
+//    //Users can click "Read More" to read the article within the app
+//    var readMoreButton: UIButton = {
+//        let button = UIButton()
+//        button.setTitle("Read More", for: .normal)
+//        button.titleLabel?.font = UIFont(name: "AvenirNext-Bold", size: 12)
+//        button.setTitleColor(.label, for: .normal)
+//        button.addTarget(self, action: #selector(openURL(sender:)), for: .touchUpInside)
+//        return button
+//    }()
+//
+//    //How long ago since the article was published
+//    var lastUpdatedLabel: UILabel = {
+//        let label = UILabel()
+//        label.textColor = .systemGray
+//        label.font = UIFont(name: "AvenirNext", size: 12)
+//        return label
+//    }()
+//
+//
+//    //Closure created for Read More action to assign the parsed JSON url to it in NewsController cellForRowAtIndexPath
+//    var readMoreAction: ((UIButton) -> Void)?
     
 // MARK: - Init
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
@@ -32,35 +57,18 @@ class NewsDetailsTableViewCell: UITableViewCell {
     
 // MARK: - Helper Functions
     func setupCellLayout() {
-        
-        //Description of the article
-        descriptionLabel.numberOfLines = 0
-        descriptionLabel.lineBreakMode = .byWordWrapping
-        descriptionLabel.textColor = .label
-        descriptionLabel.font = UIFont(name: "AvenirNext", size: 14)
-        
-        addSubview(descriptionLabel)
-        descriptionLabel.anchor(top: topAnchor, left: leftAnchor, right: rightAnchor, paddingTop: 10, paddingLeft: 40, paddingRight: 20)
-        
-        //How long ago since the article was published
-        lastUpdatedLabel.textColor = .systemGray
-        lastUpdatedLabel.font = UIFont(name: "AvenirNext", size: 12)
-        
-        addSubview(lastUpdatedLabel)
-        lastUpdatedLabel.anchor(top: descriptionLabel.bottomAnchor, bottom: bottomAnchor, right: rightAnchor, paddingTop: 5, paddingBottom: 10, paddingRight: 40)
-        
-        //Users can click "Read More" to read the article within the app
-        readMoreButton.setTitle("Read More", for: .normal)
-        readMoreButton.titleLabel?.font = UIFont(name: "AvenirNext-Bold", size: 12)
-        readMoreButton.setTitleColor(.label, for: .normal)
-        readMoreButton.addTarget(self, action: #selector(openURL(sender:)), for: .touchUpInside)
-        
-        addSubview(readMoreButton)
-        readMoreButton.anchor(top: descriptionLabel.bottomAnchor, left: leftAnchor, bottom: bottomAnchor, paddingTop: 5, paddingLeft: 40, paddingBottom: 10)
+//        addSubview(descriptionLabel)
+//        descriptionLabel.anchor(top: topAnchor, left: leftAnchor, right: rightAnchor, paddingTop: 10, paddingLeft: 40, paddingRight: 20)
+//        
+//        addSubview(lastUpdatedLabel)
+//        lastUpdatedLabel.anchor(top: descriptionLabel.bottomAnchor, bottom: bottomAnchor, right: rightAnchor, paddingTop: 5, paddingBottom: 10, paddingRight: 40)
+//
+//        addSubview(readMoreButton)
+//        readMoreButton.anchor(top: descriptionLabel.bottomAnchor, left: leftAnchor, bottom: bottomAnchor, paddingTop: 5, paddingLeft: 40, paddingBottom: 10)
     }
     
-    @objc func openURL(sender: UIButton) {
-        self.readMoreAction?(sender)
-    }
+//    @objc func openURL(sender: UIButton) {
+//        self.readMoreAction?(sender)
+//    }
     
 }
