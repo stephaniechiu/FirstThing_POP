@@ -6,6 +6,10 @@
 //  Copyright © 2020 Stephanie Chiu. All rights reserved.
 //
 
+/*
+Sets up the navigation controller, layout, collectionView, and tableView for the Category viewController
+*/
+
 import UIKit
 
 extension CategoryController: ControllerDelegate {

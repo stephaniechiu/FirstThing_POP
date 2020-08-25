@@ -7,7 +7,7 @@
 //
 
 /*
- Sets up the navigation controller, layout, and tableView
+ Sets up the navigation controller, layout, and tableView for the News Controller
  */
 
 import UIKit

@@ -6,6 +6,10 @@
 //  Copyright © 2020 Stephanie Chiu. All rights reserved.
 //
 
+/*
+ Topics that users can choose from with its corresponding URL
+ */
+
 import Foundation
 
 extension CategoryController {

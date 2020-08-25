@@ -1,9 +1,19 @@
 //
-//  Controller.swift
+//  ControllerProtocol.swift
 //  FirstThing_POP
 //
 //  Created by Stephanie on 8/18/20.
 //  Copyright © 2020 Stephanie Chiu. All rights reserved.
 //
 
-import Foundation
+/*
+Outline for what the controller in each viewController (News, Category) needs to adhere to. Each has a specific navigation controller and view layout
+ */
+
+import UIKit
+
+protocol ControllerDelegate: class {
+    
+    func setupNavigationController()
+    func setupLayout()
+}

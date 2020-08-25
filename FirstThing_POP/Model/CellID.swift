@@ -6,6 +6,10 @@
 //  Copyright © 2020 Stephanie Chiu. All rights reserved.
 //
 
+/*
+ Reuse identifiers for tableViews and collectionViews
+ */
+
 import Foundation
 
 struct Cell {

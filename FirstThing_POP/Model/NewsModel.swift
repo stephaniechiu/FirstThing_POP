@@ -8,6 +8,10 @@
 
 import Foundation
 
+/*
+ JSON Data is decoded from News API, newsapi.org
+ */
+
 struct Articles: Codable {
     var articles: [Article]
 }
