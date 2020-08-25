@@ -6,6 +6,10 @@
 //  Copyright © 2020 Stephanie Chiu. All rights reserved.
 //
 
+/*
+Outline for what the view in each viewController (News, Category) needs to adhere to
+ */
+
 import UIKit
 
 protocol ViewLayoutDelegate: class {
