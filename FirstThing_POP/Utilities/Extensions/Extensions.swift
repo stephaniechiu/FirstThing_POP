@@ -50,3 +50,35 @@ extension UIView {
         }
     }
 }
+
+extension Date {
+    func timeAgoDisplay() -> String {
+        let publishedTime = Int(Date().timeIntervalSince(self)) //Seconds since the article was published
+        let minute = 60
+        let hour = 60 * minute
+        let day = 24 * hour
+        let week = 7 * day
+        let month = 4 * week
+        var timeSincePublished = 0
+        var timeUnit = ""
+        
+        if publishedTime < hour {
+            timeSincePublished = publishedTime / minute
+            timeUnit = "min"
+        } else if publishedTime < day {
+            timeSincePublished = publishedTime / hour
+            timeUnit = "hour"
+        } else if publishedTime < week {
+            timeSincePublished = publishedTime / day
+            timeUnit = "day"
+        } else if publishedTime < month {
+            timeSincePublished = publishedTime / week
+            timeUnit = "week"
+        } else {
+            timeSincePublished = publishedTime / month
+            timeUnit = "month"
+        }
+        
+        return "\(timeSincePublished) \(timeUnit)\(timeSincePublished == 1 ? "" : "s")"
+    }
+}

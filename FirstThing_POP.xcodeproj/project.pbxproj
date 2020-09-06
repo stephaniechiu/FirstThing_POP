@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		904127BE2500C7440022AA99 /* UserNotifications.swift in Sources */ = {isa = PBXBuildFile; fileRef = 904127BD2500C7440022AA99 /* UserNotifications.swift */; };
 		9045F4F724E9D778004A040C /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9045F4F624E9D778004A040C /* NetworkService.swift */; };
 		9045F4FE24EB2BB9004A040C /* ViewProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9045F4FD24EB2BB9004A040C /* ViewProtocol.swift */; };
 		9045F50124EB8D42004A040C /* NewsURL.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9045F50024EB8D41004A040C /* NewsURL.swift */; };
@@ -20,18 +21,31 @@
 		904BB1FC24F0BE080058CFAD /* CategoryData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 904BB1FB24F0BE080058CFAD /* CategoryData.swift */; };
 		904BB1FE24F0BE320058CFAD /* CategoryModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 904BB1FD24F0BE320058CFAD /* CategoryModel.swift */; };
 		904BB20124F0BF270058CFAD /* CategoryCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 904BB20024F0BF270058CFAD /* CategoryCollectionViewCell.swift */; };
+		9053EC7624FEFC0D00FAB1DF /* FirstThing_POPUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9053EC7524FEFC0D00FAB1DF /* FirstThing_POPUITests.swift */; };
+		9053ECBE24FF1F0100FAB1DF /* MockURLProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9053ECBD24FF1F0100FAB1DF /* MockURLProtocol.swift */; };
 		908097A424E7278400B7268A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 908097A324E7278400B7268A /* AppDelegate.swift */; };
 		908097A624E7278400B7268A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 908097A524E7278400B7268A /* SceneDelegate.swift */; };
 		908097A824E7278400B7268A /* NewsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 908097A724E7278400B7268A /* NewsController.swift */; };
 		908097AD24E7278700B7268A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 908097AC24E7278700B7268A /* Assets.xcassets */; };
 		908097B024E7278700B7268A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 908097AE24E7278700B7268A /* LaunchScreen.storyboard */; };
 		908097BE24E7338500B7268A /* NewsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 908097BD24E7338500B7268A /* NewsView.swift */; };
-		908097C124E747B600B7268A /* UIViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 908097C024E747B600B7268A /* UIViewExtensions.swift */; };
+		908097C124E747B600B7268A /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 908097C024E747B600B7268A /* Extensions.swift */; };
 		908097C324E87A8800B7268A /* NewsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 908097C224E87A8800B7268A /* NewsModel.swift */; };
 		908097C824E87C1300B7268A /* CellID.swift in Sources */ = {isa = PBXBuildFile; fileRef = 908097C724E87C1300B7268A /* CellID.swift */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		9053EC7824FEFC0D00FAB1DF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9080979824E7278400B7268A /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 9080979F24E7278400B7268A;
+			remoteInfo = FirstThing_POP;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
+		904127BD2500C7440022AA99 /* UserNotifications.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserNotifications.swift; sourceTree = "<group>"; };
 		9045F4F624E9D778004A040C /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
 		9045F4FD24EB2BB9004A040C /* ViewProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewProtocol.swift; sourceTree = "<group>"; };
 		9045F50024EB8D41004A040C /* NewsURL.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsURL.swift; sourceTree = "<group>"; };
@@ -45,6 +59,10 @@
 		904BB1FB24F0BE080058CFAD /* CategoryData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryData.swift; sourceTree = "<group>"; };
 		904BB1FD24F0BE320058CFAD /* CategoryModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryModel.swift; sourceTree = "<group>"; };
 		904BB20024F0BF270058CFAD /* CategoryCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryCollectionViewCell.swift; sourceTree = "<group>"; };
+		9053EC7324FEFC0D00FAB1DF /* FirstThing_POPUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FirstThing_POPUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		9053EC7524FEFC0D00FAB1DF /* FirstThing_POPUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstThing_POPUITests.swift; sourceTree = "<group>"; };
+		9053EC7724FEFC0D00FAB1DF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9053ECBD24FF1F0100FAB1DF /* MockURLProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockURLProtocol.swift; sourceTree = "<group>"; };
 		908097A024E7278400B7268A /* FirstThing_POP.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FirstThing_POP.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		908097A324E7278400B7268A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		908097A524E7278400B7268A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -53,12 +71,19 @@
 		908097AF24E7278700B7268A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		908097B124E7278700B7268A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		908097BD24E7338500B7268A /* NewsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsView.swift; sourceTree = "<group>"; };
-		908097C024E747B600B7268A /* UIViewExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewExtensions.swift; sourceTree = "<group>"; };
+		908097C024E747B600B7268A /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		908097C224E87A8800B7268A /* NewsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsModel.swift; sourceTree = "<group>"; };
 		908097C724E87C1300B7268A /* CellID.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellID.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		9053EC7024FEFC0D00FAB1DF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		9080979D24E7278400B7268A /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -69,6 +94,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		904127BC2500C72D0022AA99 /* Notifications */ = {
+			isa = PBXGroup;
+			children = (
+				904127BD2500C7440022AA99 /* UserNotifications.swift */,
+			);
+			path = Notifications;
+			sourceTree = "<group>";
+		};
 		9045F4F324E9D232004A040C /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
@@ -105,10 +138,21 @@
 			path = CollectionViewCell;
 			sourceTree = "<group>";
 		};
+		9053EC7424FEFC0D00FAB1DF /* FirstThing_POPUITests */ = {
+			isa = PBXGroup;
+			children = (
+				9053EC7524FEFC0D00FAB1DF /* FirstThing_POPUITests.swift */,
+				9053EC7724FEFC0D00FAB1DF /* Info.plist */,
+				9053ECBD24FF1F0100FAB1DF /* MockURLProtocol.swift */,
+			);
+			path = FirstThing_POPUITests;
+			sourceTree = "<group>";
+		};
 		9080979724E7278400B7268A = {
 			isa = PBXGroup;
 			children = (
 				908097A224E7278400B7268A /* FirstThing_POP */,
+				9053EC7424FEFC0D00FAB1DF /* FirstThing_POPUITests */,
 				908097A124E7278400B7268A /* Products */,
 			);
 			sourceTree = "<group>";
@@ -117,6 +161,7 @@
 			isa = PBXGroup;
 			children = (
 				908097A024E7278400B7268A /* FirstThing_POP.app */,
+				9053EC7324FEFC0D00FAB1DF /* FirstThing_POPUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -129,6 +174,7 @@
 				908097B724E7323900B7268A /* Model */,
 				908097B824E7324C00B7268A /* View */,
 				908097B924E7325200B7268A /* Controller */,
+				904127BC2500C72D0022AA99 /* Notifications */,
 				908097BA24E7336400B7268A /* Networking */,
 				9045F4F324E9D232004A040C /* Utilities */,
 				908097AC24E7278700B7268A /* Assets.xcassets */,
@@ -183,7 +229,7 @@
 		908097BF24E747A700B7268A /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
-				908097C024E747B600B7268A /* UIViewExtensions.swift */,
+				908097C024E747B600B7268A /* Extensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -199,6 +245,24 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		9053EC7224FEFC0D00FAB1DF /* FirstThing_POPUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9053EC7C24FEFC0D00FAB1DF /* Build configuration list for PBXNativeTarget "FirstThing_POPUITests" */;
+			buildPhases = (
+				9053EC6F24FEFC0D00FAB1DF /* Sources */,
+				9053EC7024FEFC0D00FAB1DF /* Frameworks */,
+				9053EC7124FEFC0D00FAB1DF /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				9053EC7924FEFC0D00FAB1DF /* PBXTargetDependency */,
+			);
+			name = FirstThing_POPUITests;
+			productName = FirstThing_POPUITests;
+			productReference = 9053EC7324FEFC0D00FAB1DF /* FirstThing_POPUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
 		9080979F24E7278400B7268A /* FirstThing_POP */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 908097B424E7278700B7268A /* Build configuration list for PBXNativeTarget "FirstThing_POP" */;
@@ -222,10 +286,14 @@
 		9080979824E7278400B7268A /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 1150;
+				LastSwiftUpdateCheck = 1160;
 				LastUpgradeCheck = 1150;
 				ORGANIZATIONNAME = "Stephanie Chiu";
 				TargetAttributes = {
+					9053EC7224FEFC0D00FAB1DF = {
+						CreatedOnToolsVersion = 11.6;
+						TestTargetID = 9080979F24E7278400B7268A;
+					};
 					9080979F24E7278400B7268A = {
 						CreatedOnToolsVersion = 11.5;
 					};
@@ -245,11 +313,19 @@
 			projectRoot = "";
 			targets = (
 				9080979F24E7278400B7268A /* FirstThing_POP */,
+				9053EC7224FEFC0D00FAB1DF /* FirstThing_POPUITests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		9053EC7124FEFC0D00FAB1DF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		9080979E24E7278400B7268A /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -262,6 +338,15 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		9053EC6F24FEFC0D00FAB1DF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9053EC7624FEFC0D00FAB1DF /* FirstThing_POPUITests.swift in Sources */,
+				9053ECBE24FF1F0100FAB1DF /* MockURLProtocol.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		9080979C24E7278400B7268A /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -271,8 +356,9 @@
 				908097C324E87A8800B7268A /* NewsModel.swift in Sources */,
 				908097A824E7278400B7268A /* NewsController.swift in Sources */,
 				904BB1F724F0B6BD0058CFAD /* CategoryView.swift in Sources */,
+				904127BE2500C7440022AA99 /* UserNotifications.swift in Sources */,
 				904BB1FE24F0BE320058CFAD /* CategoryModel.swift in Sources */,
-				908097C124E747B600B7268A /* UIViewExtensions.swift in Sources */,
+				908097C124E747B600B7268A /* Extensions.swift in Sources */,
 				904BB1FA24F0BB990058CFAD /* CategoryControllerSetup.swift in Sources */,
 				904BB1F224F0B26D0058CFAD /* TabBarController.swift in Sources */,
 				9045F4FE24EB2BB9004A040C /* ViewProtocol.swift in Sources */,
@@ -291,6 +377,14 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		9053EC7924FEFC0D00FAB1DF /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 9080979F24E7278400B7268A /* FirstThing_POP */;
+			targetProxy = 9053EC7824FEFC0D00FAB1DF /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin PBXVariantGroup section */
 		908097AE24E7278700B7268A /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
@@ -303,6 +397,46 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		9053EC7A24FEFC0D00FAB1DF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = PAF88N9AZQ;
+				INFOPLIST_FILE = FirstThing_POPUITests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.6;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.stephaniechiu.FirstThing-POPUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = FirstThing_POP;
+			};
+			name = Debug;
+		};
+		9053EC7B24FEFC0D00FAB1DF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = PAF88N9AZQ;
+				INFOPLIST_FILE = FirstThing_POPUITests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.6;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.stephaniechiu.FirstThing-POPUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = FirstThing_POP;
+			};
+			name = Release;
+		};
 		908097B224E7278700B7268A /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -456,6 +590,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		9053EC7C24FEFC0D00FAB1DF /* Build configuration list for PBXNativeTarget "FirstThing_POPUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9053EC7A24FEFC0D00FAB1DF /* Debug */,
+				9053EC7B24FEFC0D00FAB1DF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		9080979B24E7278400B7268A /* Build configuration list for PBXProject "FirstThing_POP" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

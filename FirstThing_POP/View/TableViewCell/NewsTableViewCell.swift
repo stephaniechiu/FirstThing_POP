@@ -7,10 +7,14 @@
 //
 
 import UIKit
+import SafariServices
 
 class NewsTableViewCell: UITableViewCell {
     
 // MARK: - Properties
+    
+    weak var delegate: ReadActionDelegate?
+    var url: String = ""
     
     let container: UIView = {
         let view = UIView()
@@ -93,7 +97,10 @@ class NewsTableViewCell: UITableViewCell {
     // MARK: - Selectors
     
     @objc func openURL(sender: UIButton) {
-        self.readMoreAction?(sender)
+        let articleViewController = URL(string: url)!
+        delegate?.present(from: articleViewController)
+        print(articleViewController)
+//        self.readMoreAction?(sender)
     }
     
     // MARK: - Helper Functions
@@ -102,6 +109,24 @@ class NewsTableViewCell: UITableViewCell {
         UIView.animate(withDuration: 0.5, delay: 0.3, usingSpringWithDamping: 0.8, initialSpringVelocity: 1, options: .curveEaseOut, animations: {
             self.contentView.layoutIfNeeded()
         })
+    }
+    
+    func setupCellFromJSONData(section: Article) {
+        let currentTime = Date()
+        let formatter = ISO8601DateFormatter()
+        let publishedTimeFormat = formatter.date(from: section.publishedAt) ?? currentTime
+        lastUpdatedLabel.text = publishedTimeFormat.timeAgoDisplay()
+        
+        selectionStyle = .none
+        
+        //Title of article
+        newsTitleLabel.text = section.title
+        
+        //Article description
+        descriptionLabel.text = section.description
+        
+        //Article URL
+        url = section.url
     }
     
 }
